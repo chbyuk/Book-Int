@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>천병욱 | Book Int 개발자 포트폴리오</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use a custom font family and a clean setup -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#4f46e5', // Indigo
+                        'secondary': '#1f2937', // Darker Gray for cards
+                        'background-dark': '#0f172a', // Slate 900
+                        'text-light': '#f3f4f6', // Gray 100
+                    }
+                },
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar styling for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4f46e5;
+            border-radius: 4px;
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-text-light font-sans min-h-screen">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-background-dark/95 backdrop-blur-sm border-b border-gray-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-primary">Book Int</h1>
+            <nav class="space-x-4 text-sm font-medium">
+                <a href="#about" class="hover:text-primary transition duration-150">소개</a>
+                <a href="#skills" class="hover:text-primary transition duration-150">기술 스택</a>
+                <a href="#project" class="hover:text-primary transition duration-150">프로젝트</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
+
+        <!-- Hero Section -->
+        <section id="hero" class="text-center pt-16 pb-10">
+            <div class="flex flex-col items-center">
+                <!-- Profile Image -->
+                <img src="https://avatars.githubusercontent.com/u/188002695?v=4" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/160x160/334155/ffffff?text=CBU'"
+                     alt="천병욱 프로필 이미지" 
+                     class="w-40 h-40 rounded-full border-4 border-primary shadow-2xl mb-6 object-cover">
+                
+                <h2 class="text-5xl sm:text-6xl font-black mb-3 leading-tight">
+                    천병욱
+                </h2>
+                <p class="text-xl sm:text-2xl text-gray-400 font-light max-w-2xl">
+                    "없어졌었던 사람들의 흥미를 되살리는 개발자"
+                </p>
+                <div class="mt-8 flex space-x-4">
+                    <a href="mailto:cbu0123@naver.com" class="text-gray-300 hover:text-primary transition duration-200">
+                        <!-- Icon: Mail -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </a>
+                    <a href="https://github.com/chbyuk" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-primary transition duration-200">
+                        <!-- Icon: GitHub -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3-2.7 6-5.8 6-10.3a5.2 5.2 0 0 0-1.5-3.8 5.6 5.6 0 0 0-4.8 0A10.7 10.7 0 0 0 12 3c-1.3 0-2.6.2-3.8.7a5.6 5.6 0 0 0-4.8 0A5.2 5.2 0 0 0 2 6.4c0 4.5 3 7.6 6 10.3a4.8 4.8 0 0 0-1 3.5v4"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="pt-8">
+            <h3 class="text-3xl font-bold border-b-2 border-primary pb-2 mb-8 flex items-center">
+                <!-- Icon: User -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user mr-3"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                상세 소개
+            </h3>
+            <div class="space-y-4 text-lg text-gray-300 bg-secondary p-6 rounded-xl shadow-lg">
+                <p>
+                    저는 프론트엔드와 백엔드를 둘다 시도하면서 사람들이 보지 못하는 것을 다시 보게 해주고 싶어하는 개발자로서 스프링을 사용하거나 AI 기술을 활용해서 개발합니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="pt-8">
+            <h3 class="text-3xl font-bold border-b-2 border-primary pb-2 mb-8 flex items-center">
+                 <!-- Icon: Code -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code mr-3"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                기술 스택
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Frontend -->
+                <div class="bg-secondary p-6 rounded-xl shadow-lg border-t-4 border-indigo-500">
+                    <h4 class="text-xl font-semibold text-primary mb-3">프론트엔드</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>JavaScript</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+                <!-- Backend -->
+                <div class="bg-secondary p-6 rounded-xl shadow-lg border-t-4 border-indigo-500">
+                    <h4 class="text-xl font-semibold text-primary mb-3">백엔드</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Spring</li>
+                        <li>Kotlin</li>
+                    </ul>
+                </div>
+                <!-- DevOps & Tools -->
+                <div class="bg-secondary p-6 rounded-xl shadow-lg border-t-4 border-indigo-500">
+                    <h4 class="text-xl font-semibold text-primary mb-3">DevOps & Tools</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Git</li>
+                        <li>Figma</li>
+                        <li>Github</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Section -->
+        <section id="project" class="pt-8">
+            <h3 class="text-3xl font-bold border-b-2 border-primary pb-2 mb-8 flex items-center">
+                 <!-- Icon: Briefcase -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase mr-3"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                주요 프로젝트: Book Int
+            </h3>
+
+            <!-- Project Card -->
+            <div class="bg-secondary p-8 rounded-xl shadow-2xl border border-gray-700">
+                <h4 class="text-3xl font-extrabold text-primary mb-4">Book Int (책 흥미 되살리기)</h4>
+                
+                <div class="space-y-8">
+                    <!-- Problem Definition -->
+                    <div>
+                        <p class="text-xl font-semibold text-gray-200 mb-2">문제 정의</p>
+                        <p class="text-gray-300">
+                            사람들이 책에 대해 관심이 떨어져 자주 읽지 않기 때문에, 이를 해결하고 책에 대한 흥미를 끌어올리기 위한 웹페이지를 개발했습니다.
+                        </p>
+                    </div>
+
+                    <!-- Core Features -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <!-- Feature 1 -->
+                        <div class="p-4 bg-gray-800 rounded-lg border border-gray-700">
+                            <h5 class="text-lg font-bold text-indigo-400 mb-1">핵심 기능 1: PDF 전자책 줄거리 요약</h5>
+                            <p class="text-gray-400">
+                                AI 기술을 활용하여 PDF로 된 전자책을 입력하면 전체적인 줄거리를 요약하여 제공합니다. (책에 대한 진입 장벽 낮추기)
+                            </p>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="p-4 bg-gray-800 rounded-lg border border-gray-700">
+                            <h5 class="text-lg font-bold text-indigo-400 mb-1">핵심 기능 2: 책 기반 포스터 생성</h5>
+                            <p class="text-gray-400">
+                                생성형 AI 기술을 활용해 해당 책에 관한 홍보 포스터를 생성합니다. (시각적 흥미 유발)
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- My Role -->
+                    <div>
+                        <p class="text-xl font-semibold text-gray-200 mb-2">나의 역할 및 기여</p>
+                        <ul class="list-disc list-inside space-y-1 text-gray-300">
+                            <li>기본적인 아이디어 제공</li>
+                            <li>AI에게 적절한 프롬프트 제공 및 테스트</li>
+                            <li>최종 마무리 작업 및 배포</li>
+                        </ul>
+                    </div>
+
+                    <!-- Results & Retrospective (Placeholder for future content) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-400 text-sm italic">
+                        <div class="p-4 bg-gray-900 rounded-lg">
+                            <p class="font-semibold text-gray-200 not-italic mb-1">결과 및 성과 (예정)</p>
+                            <p>향후 프로젝트를 완료하고 성과를 측정하여 이 공간을 채울 예정입니다.</p>
+                        </div>
+                        <div class="p-4 bg-gray-900 rounded-lg">
+                            <p class="font-semibold text-gray-200 not-italic mb-1">회고 및 개선점 (예정)</p>
+                            <p>프로젝트를 진행하며 배운 점과 개선할 점을 상세히 기록할 예정입니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 py-6 text-center text-gray-500 border-t border-gray-800">
+        <p>&copy; 2024 천병욱 Portfolio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
